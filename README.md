@@ -12,9 +12,10 @@ This project was created with:
 - Github
 - Markdown
 
-I have further demonstrated the use of HTML, CSS and JavaScript through the projects featured in this portfolio.
+I have further demonstrated the use of HTML, CSS and JavaScript throughout the projects in this portfolio.
 
 ## Launch
 
-To load my portfolio, please click on the "index.html" file & drag this to your browser window.
+To load my portfolio, please copy the following web address into your internet browser;
+https://pzakeri22.github.io/my-portfolio/
 
