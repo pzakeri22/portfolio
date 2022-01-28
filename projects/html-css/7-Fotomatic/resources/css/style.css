@@ -1,0 +1,613 @@
+/* Universal Styles */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.main-content {
+  position: relative;
+  /* top: 5.3125rem; To offset for fixed header. */
+  top: 4.6rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+/* has changing the max width and height on the below impacted other images too? */
+
+.image-container img {
+  display: block;
+  /* height: 65%; */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* before code; */
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 2.5625rem;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .main-content {
+    top: 2.5625rem;
+  }
+}
+
+/* @media only screen and (max-width: 450px) {
+  .main-content {
+    top: 2.5625rem;
+  }
+} */
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  z-index: 1;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  /* padding: 1.875rem; */
+  padding: 1.5rem;
+}
+
+header .logo {
+  flex: 1;
+  /* my code starts here */
+  font-size: 1.5rem;
+  font-family: Rubik;
+  letter-spacing: 0.05rem;
+  margin-left: 15px;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+header .icon {
+  width: 1rem;
+  padding-left: .75rem;
+}
+
+/* my code */
+header .tablet {
+  display: none;
+}
+
+header .mobile {
+  display: none;
+}
+
+/* my code starts here */
+@media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .tablet {
+    display: flex;
+    /* align-items: flex-end;
+    justify-content: flex-end; */
+    /* width: 100%; */
+  }
+
+  header .mobile {
+    display: none;
+  }
+
+  header nav ul {
+    /* justify-content: flex-end;
+    padding-left: 4rem; */
+  }
+
+  header nav li {
+    padding-left: 1.5rem;
+  }
+
+  
+  header .button {
+    background-color: #9dc20b;
+    padding: 0.5rem;
+  }
+}
+
+/*before code - i have changed this to a max of 450 */
+/* @media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  } */
+  
+@media only screen and (max-width: 450px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .tablet {
+    display: none;
+  }
+
+  header .desktop-tablet {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    display: flex;
+    width: 100%;
+  }
+
+  header .content {
+    padding: .5rem 0;
+    width: 100%;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+/* my code starts here */
+    align-items: center;
+  
+  }
+
+  header .mobile li {
+    padding: 0;
+  }
+
+  header .mobile .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+/* Sign Up Section */
+
+
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* desktops over 760px; */
+  height: 43.5rem;
+  /* my code starts here */
+  background-image: url('./../images/banner-landingpage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+
+#sign-up-cta {
+  padding: 0 5rem 2.5rem 5rem;
+  border: solid 1px #979797;
+  border-radius: 4px;
+  background-color: #9dc20b;
+  position: relative;
+  top: 171px;
+  left: 10%;
+}
+
+
+#sign-up-cta .content {
+  width: 25.625rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: white;
+}
+
+#sign-up-cta h1 {
+  font-size: 3.125rem;
+}
+
+#sign-up-cta h2 {
+  font-size: 2.25rem;
+}
+
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+}
+
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  padding-bottom: .75rem;
+}
+
+#sign-up-cta .button {
+  margin-top: 1.625rem;
+  padding: 1.25rem 7.25rem;
+}
+
+/* missing closing bracket from this media query
+but perhaps not - is everything below nested? */
+@media only screen and (max-width: 760px) {
+  #sign-up-section {
+    align-items: center;
+    justify-content: center;
+    /* height: 28rem; */
+    height: 30rem; 
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  #sign-up-cta {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+  }
+
+  #sign-up-cta .content {
+    margin-top: 0;
+  }
+
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px)  {
+  #sign-up-section {
+    height: 20rem;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Features Section */
+
+#features-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background-color: #f3f3f3;
+}
+
+.feature {
+  flex: 1;
+  margin: 0px 1.25rem;
+  background-color: white;
+  text-align: center;
+  height: 635px;
+  padding: 2rem;
+}
+
+.feature .image-container {
+  width: 90%;
+  height: 65%;
+  margin: 0 auto;
+}
+
+.feature .content {
+  padding: 2.5rem 0;
+}
+
+.feature h2 {
+  padding-bottom: .5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+
+
+/* before code; i changed the max width to 450, the issue was the titles were now TOO big*/
+@media only screen and (max-width: 760px) {
+  .feature h2 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+
+  .feature {
+    /* taken from defaults above */
+    /* flex: 1;
+    margin: 0px 1.25rem;
+    height: 635px;
+    padding: 2rem; */
+
+    /* my new code below */
+    margin: 0px 0.5rem;
+    padding: 0.5rem;
+    height: 525px;
+    width: 500px;
+  }
+
+  .feature h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  .feature .image-container {
+    /* height: 100%; */
+    margin-top: 1rem;
+    max-width: auto;
+    height: 300px;
+    max-height: auto;
+  }
+
+  #features-section {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* padding: 4rem 5%; */
+
+    /* my new code */
+    padding: 1.5rem 0.25rem;
+
+  }
+
+  .feature img {
+    display: block;
+    /* height: 65%; */
+    max-width: fit-content;
+    max-height: auto;
+  }
+
+}
+
+/* @media only screen and (max-width: 450px) {
+  .feature h2 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  } */
+
+
+/* before code - changed max width */
+/* @media only screen and (max-width: 760px) {
+  #features-section {
+    flex-flow: column;
+    padding: 0;
+  }
+
+  .feature {
+    margin: 0;
+    padding: 1.25rem 1rem 0 1rem;
+  }
+} */
+
+@media only screen and (max-width: 450px) {
+  #features-section {
+    flex-flow: column;
+    padding: 0;
+  }
+
+  .feature {
+    margin: 0;
+    padding: 1.25rem 1rem 0 1rem;
+  }
+}
+
+
+/* Filters Section */
+
+#filters-section {
+  padding: 4rem 0;
+  background-color: #4a4a4a;
+}
+
+#filters-section .content {
+  padding: 0 .625rem;
+  margin-bottom: 5rem;
+}
+
+#filters-section .content h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+#filters-section .content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: white;
+}
+
+#filters-section .images-container {
+  max-width: 100%;
+  padding: 0 1%;
+  display: flex;
+}
+
+/* My new code here for tablets */
+@media only screen and (max-width: 760px) {
+  #filters-section {
+    padding: 3rem 0 0 0;
+  }
+
+  #filters-section .content {
+    /* margin-bottom: 1rem; */
+  position: relative;
+  top: 1rem;
+  }
+
+  #filters-section .content h2 {
+    /* padding-bottom: .625rem;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal; */
+
+    line-height: 1.3;
+
+  }
+
+  #filters-section .content h3 {
+    /* font-size: .875rem;
+    line-height: 1.4; */
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+  #filters-section .extra {
+    /* display: none; */
+  }
+}
+
+
+/* before code - the max width of the below was 760 */
+@media only screen and (max-width: 450px) {
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 1rem;
+  }
+
+  #filters-section .content h2 {
+    padding-bottom: .625rem;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+
+  #filters-section .content h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+  #filters-section .extra {
+    display: none;
+  }
+}
+
+
+/* Quotes Section */
+
+#quotes-section {
+  background-color: #f3f3f3;
+}
+
+#quotes-section .content {
+  padding: 5rem 0;
+
+}
+
+#quotes-section .quote {
+  padding-right: 1.875rem;
+  font-family: "Palatino", serif;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+#quotes-section .quote-citation {
+  height: 1.875rem;
+}
+
+@media only screen and (max-width: 760px) {
+  #quotes-section .content {
+    padding: 1.875rem .625rem;
+    text-align: left;
+    margin: 20px;
+
+  }
+
+  #quotes-section .quote {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    /* text-align: left; */
+    /* margin: 20px; */
+  }
+
+  #quotes-section .quote-citation {
+    /* display: inline-block; */
+    padding-top: 1rem;
+    /* margin: auto; */
+  margin-left: 50px;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #9b9b9b;
+  padding: 1.5rem 2rem;
+
+}
+
+footer .content {
+  color: white;
+  display: flex;
+  font-size: 0.75rem;
+}
+
+footer .copyright {
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 760px) {
+  footer .content {
+    /* font-size: .625rem; */
+    font-size: 0.75rem;
+  }
+}
