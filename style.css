@@ -5,6 +5,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .grid {
     /* background-color: lightyellow; */
     /* border: 1px solid red; */
@@ -20,7 +24,7 @@
                         "portfolio"
                         "contact";
     grid-template-columns: 1fr;
-    grid-template-rows: 4rem 34rem 19rem 26rem minmax(49rem, auto) 25rem;    
+    grid-template-rows: 4rem 34rem 19rem 26rem minmax(49rem, auto) 25rem;
 }
 
 .main-nav,
@@ -169,12 +173,6 @@ ul no margin or padding */
     opacity: 0.85;
 }
 
-
-@media {
-    border-radius: 40px; for skills section
-
-
-}
 
 .about {
     grid-area: about;
