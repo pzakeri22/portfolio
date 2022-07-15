@@ -13,7 +13,7 @@ This project was created with:
 - Markdown
 
 I have further demonstrated the use of HTML, CSS and JavaScript throughout the projects in this portfolio.
-
+ 
 ## Launch
 
 To load my portfolio, please copy the following web address into your internet browser;
