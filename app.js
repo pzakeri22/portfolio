@@ -1,11 +1,11 @@
 
-let hero = document.querySelector('.hero');
+// let hero = document.querySelector('.hero');
 
- function dashedBorderOn(event) {
-    event.target.style.border = '2px dotted grey';
- }
+//  function dashedBorderOn(event) {
+//     event.target.style.border = '2px dotted grey';
+//  }
 
-hero.addEventListener('mouseover', dashedBorderOn);
-hero.addEventListener('mouseout', dashedBorderOff);
+// hero.addEventListener('mouseover', dashedBorderOn);
+// hero.addEventListener('mouseout', dashedBorderOff);
 
 
