@@ -1,6 +1,6 @@
 # Web Developer Portfolio - by Parisa Z.
 
-The files in this folder are all part of my portfolio, showcasing the skills I have gained as a junior Web Developer.
+The files in this folder are all part of my portfolio, showcasing the skills I have gained as a junior Web Developer. 
 
 ## Technologies
 
