@@ -17,5 +17,5 @@ I have further demonstrated the use of HTML, CSS and JavaScript throughout the p
 ## Launch
 
 To load my portfolio, please copy the following web address into your internet browser;
-https://pzakeri22.github.io/my-portfolio/
+https://pzakeri22.github.io/
 
