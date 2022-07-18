@@ -8,14 +8,15 @@
 
 html {
     scroll-behavior: smooth;
-
     /* background-color: lightyellow; */
+
 }
 
 
 body {
     /* background-color: paleturquoise; */
-
+    width:100%;
+    overflow-x:hidden;
 /* body and grid are same */
 }
 
@@ -40,16 +41,19 @@ body {
                         "portfolio"
                         "contact";
     grid-template-columns: 1fr;
-    grid-template-rows: auto 34rem 19rem 26rem minmax(49rem, auto) 25rem;
-    
+    /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) 25rem;    */
+    /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) auto ;        */
+    grid-template-rows: auto minmax(37rem, 48rem) 19rem 26rem minmax(49rem, auto) auto ;       
+     
     /* background-color: lightgray; */
     justify-content: center; 
 
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
 
 }
 
-.main-nav,
+/* .main-nav, */
 .hero,
 .skills, 
 .about,
@@ -70,41 +74,39 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;       
-        /* padding: 0.8rem; */
+    width: 100%;        
+    /* padding: 0.6rem 1rem;                          */
+ 
+    padding: 5px 1rem;            
 
-            /* background-color: lightgreen; */
-
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    /* display: none;  */
+    /* background-color: lightgreen; */
 }
 
 .main-nav p {
     color: white; 
-    font-size: calc(1.15rem + 0.7vw);     
+    /* font-size: calc(1.15rem + 0.7vw);      */
+    font-size: 1.7rem;           
     letter-spacing: 0.05rem;
     text-align: center;
+    font-family: 'Roboto Mono', monospace;  
 }
 
-@media only screen and (max-width: 600px) {
-    .main-nav p {
-        display: none;
-    }
-    .main-nav ul {
-        margin: auto;
-    }
-}
 .main-nav ul {
-
-
     display: flex;
     justify-content: center; 
-
-    /* perhaps this */
     width: auto;             
+    gap: 1rem;
+    align-items: center;   
  
 }
 
 .main-nav li {
-    font-size: calc(1rem + 0.2vw);              
+    font-size: calc(0.9rem + 0.25vw);              
     letter-spacing: 0.05rem;
     list-style: none;    
 }
@@ -112,17 +114,43 @@ h3 {
 .main-nav a {
     text-decoration: none;
     font-weight: bold;
-    padding: calc(0.5rem + 0.5vw);                   
-    /* display: inline-block; */
+    /* padding: calc(0.5rem + 0.3vw);                      */
+    padding: calc(0.6rem);                         
+
+    display: inline-block;
     transition: color 0.3s;
     color: white;
+}
 
+.main-nav .home-link { 
+    padding: 0;
 }
 
 .main-nav a:hover { 
     cursor: pointer; 
     color: midnightblue; 
   } 
+
+  .main-nav img {
+    width: calc(2.5rem + 0.3vw);                 
+    vertical-align: top;       
+    filter: invert(100%);  
+
+ 
+    /* margin: 0;   */
+    /* display: inline;   */
+    /* display: none;  */
+    /* float: left;  */
+} 
+
+.main-nav .up-arrow {
+    /* overflow: hidden;   */
+}
+
+.main-nav img:hover {
+    filter: invert(9%) sepia(96%) saturate(3435%) hue-rotate(241deg) brightness(82%) contrast(100%);
+    transition: all 0.3s; 
+}
 
 
 /*  why is the centering of my header not working?
@@ -137,27 +165,51 @@ ul no margin or padding */
 .hero {
     grid-area: hero;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: center;  
+    gap: calc(1rem + 4.5vw);                      
     align-items: center;
+    align-content: center;  
     text-align: center;
     color: midnightblue;
     letter-spacing: 0.1rem;
+    /* width: 100%;   */
+    flex-wrap: wrap; 
+    position: relative;
+    top: 56px;    
 }
 
+.hero .intro {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;          
+    gap: calc(1rem + 1.7vw);     
+} 
+
 .hero h1 {
-    font-size: 3.2rem;
+    /* font-size: 3.2rem;  */
+    font-size: calc(2.3rem + 1.2vw);                     
+
 }
 
 .hero h2 {
-    font-size: 2.3rem;
-    font-style: italic;
+    font-size: 1.7rem;
+    display: none;
+    color: rgb(188, 23, 92)
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.3rem; 
     letter-spacing: 0.05rem;
+    
+}
+
+.hero img {
+    width: 95vw;
+    max-width: 25rem;      
+    height: auto;
+
+    /* margin: 4rem 0;      */
 }
 
 .skills {
@@ -172,7 +224,8 @@ ul no margin or padding */
     justify-content: center;
     gap: 2rem;
 
-
+    position: relative;
+    top: 56px;     
 }
 
 .skills .items {
@@ -182,7 +235,6 @@ ul no margin or padding */
     background-color: hsla(0, 0%, 100%, 0.3);
     width: 100%;
     height: 6.5rem;
-
     flex-wrap: wrap;   
 }
 
@@ -235,6 +287,8 @@ ul no margin or padding */
     gap: 2.5rem;
     background-color: rgba(209, 179, 223, 0.5);
     
+    position: relative;
+    top: 56px;     
 }
 
 
@@ -258,7 +312,10 @@ ul no margin or padding */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4.5rem 0;
+    padding: 4.5rem 0;  
+
+    position: relative;
+    top: 56px;     
 
 }
 
@@ -276,20 +333,20 @@ ul no margin or padding */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem;  
     max-width: 90rem;
     margin: 1rem;
 
 }
 
+/* add position and bottom back in if these are ok */
 .portfolio .wrapper {
-    /* border: 1px solid red; */
-    position: relative;
-    bottom: 20px;
     border-radius: 30px;
+
+    /* position: relative;
+    bottom: 20px; */
+
 }
-
-
 
 .portfolio .wrapper img {
     height: 14rem;
@@ -309,8 +366,8 @@ ul no margin or padding */
 .portfolio .wrapper:hover img {
     opacity: .5; 
     -webkit-filter: grayscale(100%) sepia(50%);
+    filter: grayscale(100%) sepia(50%);
 }
-
 
 .portfolio .wrapper .description {
     position: absolute;
@@ -387,7 +444,13 @@ ul no margin or padding */
     display: flex;
     justify-content: center;
     align-items: center;
-    
+     
+    position: relative;
+    top: 56px;     
+
+
+
+    /* margin-bottom: 4rem;   */
 }
 
 .contact ul {
@@ -397,19 +460,15 @@ ul no margin or padding */
     list-style: none;
     align-items: center;
     /* border: 1px solid white; */
-    position: relative;
-    top: 2rem;
- 
-
-
+    /* /* position: relative;
+    top: 2rem; */  
+    padding: 4rem 0; 
 }
 
 .contact li {
     /* border: 1px solid black; */
     text-align: center;
     /* border: 1px solid midnightblue; */
-    border-radius: 30px;
-    
 }
 
 .contact img {
@@ -419,8 +478,8 @@ ul no margin or padding */
 }
 
 .contact h3 {
-    position: relative;
-    bottom: 2rem;
+    /* position: relative;
+    bottom: 2rem; */
     color: midnightblue;
 }
 
@@ -436,4 +495,32 @@ ul no margin or padding */
 .contact span {
     padding: 0.75rem;
     vertical-align: middle;
+}
+
+@media only screen and (max-width: 700px) {
+    .main-nav p {
+        display: none;
+    }
+    .main-nav ul {
+        margin: auto;
+    }
+    .hero h2 {
+        display: block;   
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .main-nav ul {
+        gap: 0rem; 
+    }  
+
+    .main-nav .home-link { 
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1032px) {
+    .hero {
+        padding: 3rem 0;  
+    }
 }
