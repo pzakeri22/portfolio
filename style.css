@@ -6,10 +6,9 @@
     /* outline: 1px solid red !important; */
 }
 
-html {
+html { 
     scroll-behavior: smooth;
     /* background-color: lightyellow; */
-
 }
 
 
@@ -19,8 +18,6 @@ body {
     overflow-x:hidden;
 /* body and grid are same */
 }
-
-
 
 .grid {
     /* background-color: lightyellow; */
@@ -40,23 +37,21 @@ body {
                         "about"
                         "portfolio"
                         "contact";
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
     /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) 25rem;    */
     /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) auto ;        */
-    grid-template-rows: auto minmax(37rem, 48rem) 19rem 26rem minmax(49rem, auto) auto ;       
-     
+    /* grid-template-rows: auto minmax(30rem, 49rem) auto 26rem minmax(49rem, auto) auto ;        */
+    grid-template-rows: auto auto auto auto minmax(49rem, auto) auto ;       
+ 
     /* background-color: lightgray; */
     justify-content: center; 
 
     overflow-x: hidden; 
     overflow-y: hidden; 
 
-}
+} 
 
 /* .main-nav, */
-.hero,
-.skills, 
-.about,
 .portfolio, 
 .contact {
     padding: 1rem;
@@ -74,8 +69,8 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;        
-    /* padding: 0.6rem 1rem;                          */
+    width: 100%; 
+    /* padding: 0.6rem 1rem;*/
  
     padding: 5px 1rem;            
 
@@ -94,6 +89,7 @@ h3 {
     letter-spacing: 0.05rem;
     text-align: center;
     font-family: 'Roboto Mono', monospace;  
+
 }
 
 .main-nav ul {
@@ -136,31 +132,19 @@ h3 {
     vertical-align: top;       
     filter: invert(100%);  
 
- 
+
     /* margin: 0;   */
     /* display: inline;   */
     /* display: none;  */
     /* float: left;  */
 } 
 
-.main-nav .up-arrow {
-    /* overflow: hidden;   */
-}
+
 
 .main-nav img:hover {
     filter: invert(9%) sepia(96%) saturate(3435%) hue-rotate(241deg) brightness(82%) contrast(100%);
     transition: all 0.3s; 
 }
-
-
-/*  why is the centering of my header not working?
-my header is titled differently 
-she uses height of grid as 100vh
-container - font-size 1.5em
-header padding 1em
-li padding 1em
-
-ul no margin or padding */
 
 .hero {
     grid-area: hero;
@@ -173,10 +157,11 @@ ul no margin or padding */
     text-align: center;
     color: midnightblue;
     letter-spacing: 0.1rem;
-    /* width: 100%;   */
+    /* width: 100%;   */ 
     flex-wrap: wrap; 
     position: relative;
     top: 56px;    
+    padding: 5rem 0; 
 }
 
 .hero .intro {
@@ -188,7 +173,8 @@ ul no margin or padding */
 
 .hero h1 {
     /* font-size: 3.2rem;  */
-    font-size: calc(2.3rem + 1.2vw);                     
+    font-size: calc(2.3rem + 1.0vw);                      
+    max-width: 90vw; 
 
 }
 
@@ -201,13 +187,16 @@ ul no margin or padding */
 .hero p {
     font-size: 1.3rem; 
     letter-spacing: 0.05rem;
-    
+    max-width: 90vw;  
+
 }
 
 .hero img {
-    width: 95vw;
-    max-width: 25rem;      
-    height: auto;
+    width: 90vw; 
+    max-width: 33rem;        
+    height: auto; 
+    /* margin: 6rem 0;          */
+
 
     /* margin: 4rem 0;      */
 }
@@ -215,95 +204,235 @@ ul no margin or padding */
 .skills {
     /* background-color: lightblue;
     color: midnightblue; */
-    background-color: rgb(85, 105, 187);
-    color: white;
     grid-area: skills;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-
     position: relative;
     top: 56px;     
-}
+    background-color: rgb(85, 105, 187);
+    color: rgb(255, 255, 255);
 
-.skills .items {
     display: flex;
-    justify-content: space-around;
-    /* border: 1px solid black; */
-    background-color: hsla(0, 0%, 100%, 0.3);
-    width: 100%;
-    height: 6.5rem;
+    gap: 12rem;           
+    
+    align-items: center;    
+    justify-content: center; 
+
     flex-wrap: wrap;   
+    padding: 5rem 0; 
 }
 
+.checklist {
+    /* max-width: 400px; */ 
+    /* background: rgb(245, 232, 174);  */
+    /* border: 5px solid rgba (200, 200, 200, 0);   */ 
+    /* border-bottom-right-radius: 30px;    */
+    display: grid;    
 
-.skills .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    font-size: 1.1rem;
-    font-weight: bold;
+    overflow: hidden;             
+    /* background-color: rgb(25, 146, 179);   */
+    /* background-color: rgb(85, 105, 187); */
+ 
+    /* border-radius: 5px;        */
+    /* border: 1px solid red;   */
+    row-gap: 1px;      
+    column-gap: 1px;    
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.1); 
+    /* margin: 6.5rem 0;      */
+
+    justify-content: center;       
+/* 
+     grid-template-areas: "html" "css"
+                        "javascript" "react"
+                        "redux" "excel"
+                        "git" "design"
+                        "responsive" "accessibility";    */
+
+    /* width: auto;   */ 
+
+    /* min-width: 271px; 
+    width: 90vw;  
+    max-width: 542px; */
+
+    /* max-width: 54 2px;  */
+ 
+    /* width: 600px;      */
+
+
+
+    /* width: 100%;  */
+
+    /* height: 200px;   */
+
+
+    /* 
+    542 on big screen
+    on small screen, remains at 542*/
+
+
+    /* height: auto;   */ 
+    /* height: auto;  
+    max-height: 900px;        */ 
+
+    width: 545px;       
+    max-width: 90vw;           
+    grid-template-columns: repeat(auto-fill, 272px);          
+    /* grid-template-columns: min-content 1fr;    */
+
+    /* grid-template-rows: repeat(auto-fill, 64px);               */
+ 
+    /* grid-template-columns: 1fr 1fr; */
+    /* max-height: 350px;          */
+    /* height: 20rem; */   
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr;     */
+    /* grid-template-rows: repeat(auto-fill, 1fr);  */
 }
 
-.skills img {
-    width: 4rem;
-    height: 4rem;
-}
+  .item {
+    display: flex; 
+ 
+    background-color: rgb(237, 237, 253);
+    background-color: rgb(245, 232, 174);   
 
-.skills .javascript img {
-    height: 3.5rem;
-    width: 3.7rem;
-    position: relative;
-    top: 0.35rem;
-    filter: hue-rotate(-8deg);
-}
+    /* border: 1px solid black; */
+    /* height: 63px;        */ 
+    /* width: auto;       */
 
-.skills .git img,
-.skills .github img {
-    position: relative;
-    top: 0.2rem;
-}
+     /* border-top: 1px solid #F1F1F1;
+    border-right:  1px solid #D1E2FF;      */
 
-.skills .css img,
-.skills .git img {
-    filter: contrast(1.3);
-}
+    /* border: 1px solid #F1F1F1;  */
 
-.skills .github img {
-    opacity: 0.85;
-}
+    /* border-top: 2px solid #2a5f7b;
+    border-left:  2px solid #cd3f37;   */
+    /* border-style: double; */
 
+    /* border-right: 1px dotted red;           */
+  }
+
+  .html {
+    /* grid-area: html;
+    width: 100%;  */
+  }
+
+  .css {
+    /* grid-area: css;
+    width: 100%;  */
+
+  }
+
+  .javascript {
+    /* grid-area: javascript;
+    width: 100%;  */
+
+  }
+
+  .react {
+    /* grid-area: react;
+    width: 100%;  */
+
+  }
+
+  .redux {
+    /* grid-area: redux;
+    width: 100%;  */
+
+  }
+
+  .excel {
+    /* grid-area: excel;
+    width: 100%;  */
+
+  }
+
+  .git {
+    /* grid-area: git;
+    width: 100%;  */
+
+  }
+  
+  .design {
+    /* grid-area: design;
+    width: 100%;  */
+
+
+  }
+  .responsive-design {
+    /* grid-area: responsive; 
+    width: 100%;  */
+  }
+
+  .accessibility {
+    /* grid-area: accessibility; 
+    width: 100%;  */
+  }
+
+  .item img {
+    width: 2.5rem;  
+    height: auto;  
+    margin-left: 3px;      
+    align-self: center;     
+
+  }
+
+  
+  .checklist p {
+    color: midnightblue;  
+    color:#ed2e77;        
+    /* color:#ed2e4e;        */
+    margin: 0; 
+    transition: background 0.2s;
+    flex: 1;
+    font-size: 20px;
+    font-weight: 400;            
+    font-family: 'Coming Soon', cursive;    
+    padding: 20px 20px 10px 20px;   
+
+  }  
+
+
+  @media only screen and (max-width: 605px) {      
+    .checklist {
+        box-shadow: none; 
+
+    }
+ 
+    .item {
+        height: 50px;   
+    }  
+
+    .checklist p {
+        font-size: 17px;        
+        
+    }
+
+    .item img {
+        width: 2rem;       
+        height: auto;  
+    }
+}
 
 .about {
+    padding: 5rem 0;  
     grid-area: about;
-    overflow: hidden;
     color: midnightblue;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 7rem; 
     background-color: rgba(209, 179, 223, 0.5);
-    
     position: relative;
     top: 56px;     
-}
+    flex-wrap: wrap;  
 
+    /* overflow: hidden; */
 
-.about h3 {
-    /* position: relative;
-    z-index: 2;
-    background-color: red; */
-    text-align: center;
 }
 
 .about p {
-    max-width: 50rem;
+    width: 90vw; 
+    max-width: 50rem;   
     line-height: 2;
-    text-align: center;
-
+    text-align: justify;
 }
 
 .portfolio {
@@ -507,6 +636,16 @@ ul no margin or padding */
     .hero h2 {
         display: block;   
     }
+
+    .hero p {
+        font-size: 1rem;   
+    }
+}
+
+@media only screen and (max-width: 1032px) {
+    .hero {
+        padding: 4rem 0;   
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -519,8 +658,24 @@ ul no margin or padding */
     }
 }
 
-@media only screen and (max-width: 1032px) {
-    .hero {
-        padding: 3rem 0;  
+ /* when checklist & title cant fit comfortably alongside eachother */
+@media only screen and (max-width: 1000px) { 
+    .skills { 
+        flex-direction: column; 
+        gap: 2rem;             
+    }
+
+    .skills h3 {
+        order: -1; 
+    } 
+
+
+} 
+
+
+@media only screen and (max-width: 1060px) {   
+    .about {
+        flex-direction: column; 
+        gap: 2.5rem;    
     }
 }
