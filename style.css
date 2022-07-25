@@ -41,8 +41,11 @@ body {
     /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) 25rem;    */
     /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) auto ;        */
     /* grid-template-rows: auto minmax(30rem, 49rem) auto 26rem minmax(49rem, auto) auto ;        */
-    grid-template-rows: auto auto auto auto minmax(49rem, auto) auto ;       
- 
+    /* grid-template-rows: auto auto auto auto minmax(49rem, auto) auto ;        */
+
+    /* grid-template-rows: auto minmax(94vh, auto) auto auto minmax(49rem, auto) auto ;        */
+    grid-template-rows: auto minmax(94vh, auto) auto auto minmax(49rem, auto) auto ;       
+
     /* background-color: lightgray; */
     justify-content: center; 
 
@@ -86,10 +89,9 @@ h3 {
     color: white; 
     /* font-size: calc(1.15rem + 0.7vw);      */
     font-size: 1.7rem;           
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.1rem; 
     text-align: center;
-    font-family: 'Roboto Mono', monospace;  
-
+    font-family: 'Coming Soon', cursive;      
 }
 
 .main-nav ul {
@@ -192,14 +194,12 @@ h3 {
 }
 
 .hero img {
-    width: 90vw; 
-    max-width: 33rem;        
-    height: auto; 
-    /* margin: 6rem 0;          */
+    height: 75vh;  
+    max-height: 50rem;        
+    width: auto;   
 
-
-    /* margin: 4rem 0;      */
 }
+
 
 .skills {
     /* background-color: lightblue;
@@ -392,7 +392,6 @@ h3 {
   @media only screen and (max-width: 605px) {      
     .checklist {
         box-shadow: none; 
-
     }
  
     .item {
@@ -642,15 +641,31 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 1032px) {
+/* when hero wraps */
+@media only screen and (max-width: 1162px) {
     .hero {
-        padding: 4rem 0;   
+        gap: 1.5rem;        
+    }
+    
+    .hero img {
+        width: 85vw;   
+        max-width: 35rem;             
+        height: auto; 
     }
 }
 
+/* on small screens, reduce padding */
+@media only screen and (max-width: 425px) {
+    .hero {
+        padding: 2rem 0;                           
+    } 
+}
+
+
+/* on narrow mobiles */
 @media only screen and (max-width: 375px) {
     .main-nav ul {
-        gap: 0rem; 
+        gap: 0rem;  
     }  
 
     .main-nav .home-link { 
@@ -668,10 +683,7 @@ h3 {
     .skills h3 {
         order: -1; 
     } 
-
-
 } 
-
 
 @media only screen and (max-width: 1060px) {   
     .about {
