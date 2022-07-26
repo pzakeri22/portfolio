@@ -3,12 +3,14 @@
     margin: 0; 
     padding: 0; 
     font-family: 'Lato', sans-serif;
-    /* outline: 1px solid red !important; */
+    outline: 1px solid red !important;
+    /* font-size: 1.05rem;   */
 }
 
 html { 
     scroll-behavior: smooth;
     /* background-color: lightyellow; */
+ 
 }
 
 
@@ -17,6 +19,7 @@ body {
     width:100%;
     overflow-x:hidden;
 /* body and grid are same */
+
 }
 
 .grid {
@@ -44,7 +47,7 @@ body {
     /* grid-template-rows: auto auto auto auto minmax(49rem, auto) auto ;        */
 
     /* grid-template-rows: auto minmax(94vh, auto) auto auto minmax(49rem, auto) auto ;        */
-    grid-template-rows: auto minmax(94vh, auto) auto auto minmax(49rem, auto) auto ;       
+    grid-template-rows: auto minmax(94vh, auto) auto auto auto auto;        
 
     /* background-color: lightgray; */
     justify-content: center; 
@@ -54,21 +57,15 @@ body {
 
 } 
 
-/* .main-nav, */
-.portfolio, 
-.contact {
-    padding: 1rem;
-}
-
 h3 {
     letter-spacing: 0.05rem;
     font-size: 2rem;
 }
 
-/* this and portfolio are causing problems */
 .main-nav {
     grid-area: nav; 
     background: linear-gradient(to right, #e66465, #9198e5);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,7 +85,7 @@ h3 {
 .main-nav p {
     color: white; 
     /* font-size: calc(1.15rem + 0.7vw);      */
-    font-size: 1.7rem;           
+    font-size: 2rem;             
     letter-spacing: 0.1rem; 
     text-align: center;
     font-family: 'Coming Soon', cursive;      
@@ -120,6 +117,8 @@ h3 {
     color: white;
 }
 
+
+/* fix home button */
 .main-nav .home-link { 
     padding: 0;
 }
@@ -208,10 +207,11 @@ h3 {
     position: relative;
     top: 56px;     
     background-color: rgb(85, 105, 187);
+
     color: rgb(255, 255, 255);
 
     display: flex;
-    gap: 12rem;           
+    gap: 10rem;            
     
     align-items: center;    
     justify-content: center; 
@@ -308,62 +308,6 @@ h3 {
     /* border-right: 1px dotted red;           */
   }
 
-  .html {
-    /* grid-area: html;
-    width: 100%;  */
-  }
-
-  .css {
-    /* grid-area: css;
-    width: 100%;  */
-
-  }
-
-  .javascript {
-    /* grid-area: javascript;
-    width: 100%;  */
-
-  }
-
-  .react {
-    /* grid-area: react;
-    width: 100%;  */
-
-  }
-
-  .redux {
-    /* grid-area: redux;
-    width: 100%;  */
-
-  }
-
-  .excel {
-    /* grid-area: excel;
-    width: 100%;  */
-
-  }
-
-  .git {
-    /* grid-area: git;
-    width: 100%;  */
-
-  }
-  
-  .design {
-    /* grid-area: design;
-    width: 100%;  */
-
-
-  }
-  .responsive-design {
-    /* grid-area: responsive; 
-    width: 100%;  */
-  }
-
-  .accessibility {
-    /* grid-area: accessibility; 
-    width: 100%;  */
-  }
 
   .item img {
     width: 2.5rem;  
@@ -412,13 +356,14 @@ h3 {
 .about {
     padding: 5rem 0;  
     grid-area: about;
-    color: midnightblue;
+    color: rgb(47, 0, 78);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 7rem; 
-    background-color: rgba(209, 179, 223, 0.5);
+    background-color: rgba(208, 168, 226, 0.5);
+
     position: relative;
     top: 56px;     
     flex-wrap: wrap;  
@@ -428,33 +373,35 @@ h3 {
 }
 
 .about p {
-    width: 90vw; 
+    width: 100vw;  
     max-width: 50rem;   
     line-height: 2;
     text-align: justify;
+    padding: 1rem; 
+    /* border: 2px solid white;      
+    border-radius: 10px;  */
 }
 
 .portfolio {
     grid-area: portfolio;
-    color: midnightblue;
+    color: rgb(66, 66, 186); 
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4.5rem 0;  
+    padding: 5rem 0;      
 
     position: relative;
     top: 56px;     
-
 }
 
 .portfolio .flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    row-gap: 3.5rem; 
+    row-gap: 2rem;         
     /* margin-bottom: 20rem; */
-    /* border: 1px solid red; */
+    /* border: 1px solid red; */ 
 }
 
 .portfolio .projects {
@@ -462,39 +409,33 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;  
-    max-width: 90rem;
+    max-width: 90rem; 
     margin: 1rem;
-
 }
 
 /* add position and bottom back in if these are ok */
 .portfolio .wrapper {
-    border-radius: 30px;
-
+    /* border-radius: 15px;   */
     /* position: relative;
     bottom: 20px; */
-
 }
 
 .portfolio .wrapper img {
-    height: 14rem;
+    /* height: 14rem;
     width: auto;
-    max-width: 95vw;    
+    max-width: 95vw;     */
 
-    border-radius: 30px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
-                0 2px 4px rgba(0,0,0,0.07), 
-                0 4px 8px rgba(0,0,0,0.07), 
-                0 8px 16px rgba(0,0,0,0.07),
-                0 16px 32px rgba(0,0,0,0.07), 
-                0 32px 64px rgba(0,0,0,0.07);
-
+    width: 600px;     
+    max-width: 90vw;       
+    height: auto;     
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  
 }
 
 .portfolio .wrapper:hover img {
     opacity: .5; 
     -webkit-filter: grayscale(100%) sepia(50%);
     filter: grayscale(100%) sepia(50%);
+    cursor: pointer;
 }
 
 .portfolio .wrapper .description {
@@ -513,7 +454,6 @@ h3 {
     color: white;
     width: 20rem;
     padding: 0.5rem 0;
-
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
     0 2px 4px rgba(0,0,0,0.07), 
     0 4px 8px rgba(0,0,0,0.07), 
@@ -522,18 +462,16 @@ h3 {
     0 32px 64px rgba(0,0,0,0.07);
 
     /* hiding mousover box for now because it causes horizontal scroll on mobile - it moves out of place. */
-    display: none;  
+    /* display: none;   */
 
 }
 
 .portfolio .wrapper:hover .description {
     visibility: visible;
-
 }
 
 .portfolio .wrapper .description p {
     padding: 0 0.5rem;
-
 }
 
 .portfolio .wrapper .description .button {
@@ -549,14 +487,11 @@ h3 {
     0 16px 32px rgba(0,0,0,0.07), 
     0 32px 64px rgba(0,0,0,0.07);
     display: inline-block;
-    
 }
-
 
 .portfolio .wrapper .description .button:hover {
     cursor: pointer;
     background-color: white;
-
 }
 
 .portfolio .wrapper .description .button a {
@@ -564,51 +499,72 @@ h3 {
     text-decoration: none;
 }
 
-
 .contact {
+    list-style: none; 
     grid-area: contact;
     background-color: rgb(85, 105, 187);
-    color: white;
+    background-color: rgb(237, 186, 212);
+    background-color: rgb(212, 147, 169);
+
+    /* background-color: rgb(154, 92, 118); */
+    /* background-color: rgb(173, 91, 104); */
+
+    /* color: white; */
+    color: rgb(56, 1, 54);
+    /* color: white; */
+ 
+    /* color: midnightblue; */
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    
+    align-items: center;  
      
     position: relative;
-    top: 56px;     
+    top: 56px;   
+    padding: 4.5rem 0;    
+    margin-bottom: 56px;  
+    line-height: 2;  
+ 
+}
 
+.contact .container {
+    display: flex; 
+    width: 65rem;   
+    max-width: 90vw; 
+    flex-wrap: wrap;
+    justify-content: center;  
+    gap: calc(0.4rem + 4vw);         
+    /* justify-items: center;    */
+}
 
+.contact h3 {
+    color: midnightblue;
+    color: rgb(56, 1, 54); 
+ 
+    /* color: white;   */
 
-    /* margin-bottom: 4rem;   */
+}
+
+.contact p {
+    /* margin-left: 4rem;       */
 }
 
 .contact ul {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;    
     list-style: none;
     align-items: center;
+    /* flex-direction: column; */
     /* border: 1px solid white; */
-    /* /* position: relative;
-    top: 2rem; */  
-    padding: 4rem 0; 
-}
-
-.contact li {
-    /* border: 1px solid black; */
-    text-align: center;
-    /* border: 1px solid midnightblue; */
 }
 
 .contact img {
-    filter: invert(11%) sepia(64%) saturate(3401%) hue-rotate(235deg) brightness(90%) contrast(105%);
+    filter: invert(6%) sepia(67%) saturate(4163%) hue-rotate(290deg) brightness(87%) contrast(106%);
+    /* filter: invert(100%) sepia(98%) saturate(0%) hue-rotate(329deg) brightness(102%) contrast(104%); */
+
+
     vertical-align: middle;
     height: 3rem;
-}
-
-.contact h3 {
-    /* position: relative;
-    bottom: 2rem; */
-    color: midnightblue;
 }
 
 .contact .github img {
@@ -616,12 +572,14 @@ h3 {
 }
 
 .contact a {
-    color: white;
-    text-decoration: none;
+    /* color: rgb(72, 1, 42); */
+    color: rgb(56, 1, 54);
+    /* color: white; */
+    text-decoration: none;  
 }
 
 .contact span {
-    padding: 0.75rem;
+    padding: 0.5rem;  
     vertical-align: middle;
 }
 
@@ -639,12 +597,16 @@ h3 {
     .hero p {
         font-size: 1rem;   
     }
+
+    .contact {
+
+    }
 }
 
 /* when hero wraps */
 @media only screen and (max-width: 1162px) {
     .hero {
-        gap: 1.5rem;        
+        gap: 1.5rem;         
     }
     
     .hero img {
