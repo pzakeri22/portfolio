@@ -2,8 +2,8 @@
     box-sizing: border-box;
     margin: 0; 
     padding: 0; 
-    font-family: 'Lato', sans-serif;
-    outline: 1px solid red !important;
+    font-family: 'Lato', sans-serif;    
+    /* outline: 1px solid red !important; */
     /* font-size: 1.05rem;   */
 }
 
@@ -58,8 +58,8 @@ body {
 } 
 
 h3 {
-    letter-spacing: 0.05rem;
-    font-size: 2rem;
+    letter-spacing: 0.1rem;   
+    font-size: 2.2rem;   
 }
 
 .main-nav {
@@ -86,7 +86,7 @@ h3 {
     color: white; 
     /* font-size: calc(1.15rem + 0.7vw);      */
     font-size: 2rem;             
-    letter-spacing: 0.1rem; 
+    letter-spacing: 0.1rem;   
     text-align: center;
     font-family: 'Coming Soon', cursive;      
 }
@@ -102,16 +102,14 @@ h3 {
 
 .main-nav li {
     font-size: calc(0.9rem + 0.25vw);              
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.05rem;     
     list-style: none;    
+    font-weight: bold; 
 }
 
 .main-nav a {
     text-decoration: none;
-    font-weight: bold;
-    /* padding: calc(0.5rem + 0.3vw);                      */
-    padding: calc(0.6rem);                         
-
+    padding: calc(0.5rem + 0.2vw);                       
     display: inline-block;
     transition: color 0.3s;
     color: white;
@@ -126,21 +124,13 @@ h3 {
 .main-nav a:hover { 
     cursor: pointer; 
     color: midnightblue; 
-  } 
+} 
 
   .main-nav img {
     width: calc(2.5rem + 0.3vw);                 
     vertical-align: top;       
     filter: invert(100%);  
-
-
-    /* margin: 0;   */
-    /* display: inline;   */
-    /* display: none;  */
-    /* float: left;  */
 } 
-
-
 
 .main-nav img:hover {
     filter: invert(9%) sepia(96%) saturate(3435%) hue-rotate(241deg) brightness(82%) contrast(100%);
@@ -174,7 +164,7 @@ h3 {
 
 .hero h1 {
     /* font-size: 3.2rem;  */
-    font-size: calc(2.3rem + 1.0vw);                      
+    font-size: calc(2.0rem + 1.5vw);                       
     max-width: 90vw; 
 
 }
@@ -206,7 +196,8 @@ h3 {
     grid-area: skills;
     position: relative;
     top: 56px;     
-    background-color: rgb(85, 105, 187);
+    /* background-color: rgb(85, 105, 187); */
+    background-color: rgb(105, 125, 204); 
 
     color: rgb(255, 255, 255);
 
@@ -217,7 +208,7 @@ h3 {
     justify-content: center; 
 
     flex-wrap: wrap;   
-    padding: 5rem 0; 
+    padding: 5.5rem 0;  
 }
 
 .checklist {
@@ -354,7 +345,7 @@ h3 {
 }
 
 .about {
-    padding: 5rem 0;  
+    padding: 5rem 0;    
     grid-area: about;
     color: rgb(47, 0, 78);
     display: flex;
@@ -362,7 +353,7 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 7rem; 
-    background-color: rgba(208, 168, 226, 0.5);
+    background-color: rgba(193, 167, 232, 0.5);
 
     position: relative;
     top: 56px;     
@@ -373,8 +364,8 @@ h3 {
 }
 
 .about p {
-    width: 100vw;  
-    max-width: 50rem;   
+    width: 50rem;
+    max-width: 90vw; 
     line-height: 2;
     text-align: justify;
     padding: 1rem; 
@@ -388,8 +379,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0;      
-
+    padding: 6rem 0;          
     position: relative;
     top: 56px;     
 }
@@ -399,118 +389,117 @@ h3 {
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    row-gap: 2rem;         
-    /* margin-bottom: 20rem; */
-    /* border: 1px solid red; */ 
+    row-gap: 4rem;           
 }
 
 .portfolio .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;  
+    gap: 4rem;         
     max-width: 90rem; 
-    margin: 1rem;
 }
 
 /* add position and bottom back in if these are ok */
 .portfolio .wrapper {
-    /* border-radius: 15px;   */
-    /* position: relative;
-    bottom: 20px; */
+    /* display: flex;
+    flex-direction: column;  
+    justify-content: space-between;   */
+     /* align-items: center; */  
+
+    width: 600px; 
+    max-width: 90vw;        
+    height: auto;      
+
+    position: relative;  
+        /* background-color: rgb(58, 68, 255);      */
 }
 
 .portfolio .wrapper img {
-    /* height: 14rem;
-    width: auto;
-    max-width: 95vw;     */
-
-    width: 600px;     
-    max-width: 90vw;       
-    height: auto;     
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  
+    background-color: rgba(0, 0, 0, 0.75);  
+    width:100%;  
+    height:100%;    
 }
 
-.portfolio .wrapper:hover img {
-    opacity: .5; 
-    -webkit-filter: grayscale(100%) sepia(50%);
-    filter: grayscale(100%) sepia(50%);
-    cursor: pointer;
-}
 
 .portfolio .wrapper .description {
-    position: absolute;
-    top: 3rem;
-    left: 2.5rem;
-    margin: 0 auto;
-    visibility:hidden;
+    position: absolute;   
+    height: 100%; 
+    width: 100%; 
+    top: 0;  
+
     display: flex;
+    gap: 1rem;   
+    letter-spacing: 0.5px;    
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
-    background-color: rgb(85, 105, 187); 
-    color: white;
-    width: 20rem;
-    padding: 0.5rem 0;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
-    0 2px 4px rgba(0,0,0,0.07), 
-    0 4px 8px rgba(0,0,0,0.07), 
-    0 8px 16px rgba(0,0,0,0.07),
-    0 16px 32px rgba(0,0,0,0.07), 
-    0 32px 64px rgba(0,0,0,0.07);
+    justify-content: center; 
+    align-items: center;    
+    text-align: center; 
 
-    /* hiding mousover box for now because it causes horizontal scroll on mobile - it moves out of place. */
-    /* display: none;   */
-
-}
-
-.portfolio .wrapper:hover .description {
-    visibility: visible;
+        /* hiding mousover box for now because it causes horizontal scroll on mobile - it moves out of place. */
+    visibility:hidden;
+    background-color: rgba(148, 159, 245, 0.93);     
+    color: rgb(12, 12, 74);
+    font-size: 1.15rem;    
+    /* font-weight: bold;  */
+    text-align: middle;    
 }
 
 .portfolio .wrapper .description p {
-    padding: 0 0.5rem;
+    width: 80%;   
+    padding: 0.5rem;   
+}
+.portfolio .wrapper:hover .description {
+    visibility: visible; 
+    animation: fadeIn 0.3s;  
+    -webkit-animation: fadeIn 0.3s;
+    -moz-animation: fadeIn 0.3s;
+    -o-animation: fadeIn 0.3s;
+    -ms-animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  } 
+
+
+.portfolio .wrapper .description .button-container { 
+    display: flex;
+    gap: 2rem; 
 }
 
 .portfolio .wrapper .description .button {
-    font-size: 1.05rem;
-    border-radius: 15px;
-    padding: 0.25rem 0.5rem;
+    border-radius: 5px; 
+    padding: 0.25rem 0.75rem;  
     margin: 0 0.3rem;
-    background-color: lightgrey;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
-    0 2px 4px rgba(0,0,0,0.07), 
-    0 4px 8px rgba(0,0,0,0.07), 
-    0 8px 16px rgba(0,0,0,0.07),
-    0 16px 32px rgba(0,0,0,0.07), 
-    0 32px 64px rgba(0,0,0,0.07);
+    background-color: rgb(255, 255, 255);
+ 
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     display: inline-block;
 }
 
 .portfolio .wrapper .description .button:hover {
     cursor: pointer;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5); 
 }
 
 .portfolio .wrapper .description .button a {
-    color: midnightblue;
     text-decoration: none;
+    color: rgb(12, 12, 74); 
 }
 
 .contact {
     list-style: none; 
     grid-area: contact;
-    background-color: rgb(85, 105, 187);
-    background-color: rgb(237, 186, 212);
-    background-color: rgb(212, 147, 169);
-
-    /* background-color: rgb(154, 92, 118); */
-    /* background-color: rgb(173, 91, 104); */
+    /* background-color: rgb(85, 105, 187);
+    background-color: rgb(212, 147, 169); */
+    background-color: rgb(224, 186, 214);
 
     /* color: white; */
     color: rgb(56, 1, 54);
+
     /* color: white; */
  
     /* color: midnightblue; */
@@ -521,7 +510,7 @@ h3 {
      
     position: relative;
     top: 56px;   
-    padding: 4.5rem 0;    
+    padding: 4rem 0;        
     margin-bottom: 56px;  
     line-height: 2;  
  
@@ -540,7 +529,7 @@ h3 {
 .contact h3 {
     color: midnightblue;
     color: rgb(56, 1, 54); 
- 
+
     /* color: white;   */
 
 }

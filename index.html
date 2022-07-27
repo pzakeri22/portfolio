@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>  
+<html id="home">   
   <head> 
     <title>Web Developer Portfolio</title>  
     <link href="./style.css" type="text/css" rel="stylesheet">
@@ -32,6 +32,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Delius&family=Delius+Swash+Caps&family=Handlee&family=Kalam:wght@300&family=Pangolin&family=Patrick+Hand&family=Sriracha&display=swap" rel="stylesheet"> 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Nunito+Sans&family=Source+Sans+Pro&family=Work+Sans&display=swap" rel="stylesheet">
+
+
 <script type='text/javascript' src="./app.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head> 
@@ -47,7 +52,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <section class="hero" id="home"> 
+        <section class="hero" > 
             <div class="intro">
                 
                 <h1>Front-End Developer</h1> 
@@ -127,73 +132,50 @@
                 I build websites that are simple and intuitive to navigate, with clear calls to action to support business goals.      
                 I have 6 months’ experience working on front-end projects, and am currently finishing an online coding course.
                 Throughout this time I've found a lot of enjoyment in bringing my designs to life, diagnosing and fixing problems, and improving my coding skills.   
-                <br><br>Prior to this I spent over two years working in the E-Commerce industry, where I gained valuable experience maintaining an online data software platform for Boots and Asda.  
+                <br><br>Prior to this I spent over two years working in the E-Commerce industry, where I gained valuable experience maintaining an online data software platform for Boots and Asda.   
                 This involved investigating major issues, organising the rollout of new features and fixes, and translating technical requirements between clients and teams.
                 I am now exicited to move into software development, and am looking forward to new work opportunities in this field.      
             </p>
             </section>
-
-            <!-- 
-                projects to add:
-                    -reddit app - on github, use readme netlify link to access
-                    -jammming - on github, use github link to access
-                    -codecademy store - use github link to access. Build readme file.
-                    -company flexbox page
-                     -html story form; - on github, use github to access. shows html forms and javascript
-
-            -->
         <section class="portfolio" id="projects">  
             <div class="flex">
                 <h3>Portfolio</h3>
                 <div class="projects">
-
                     <div class="wrapper"> 
-                        <img src="./images/reddit-screenshot - finaledit.png" class="img" title="abc"/>
-                        <div class="description">
-                            <p>Responsive website for a sports club.</p>
-                            <p>Used HTML & CSS.</p>
+                        <img src="./images/reddit-screenshot - finaledit.png" class="img" title="abc"/> 
+                        <div class="description">  
+                            <p>Minimal Reddit web app which allows users to view current posts and comments from Reddit's API.</p>     
+                            <p>Built with React, Redux and React Router.</p> 
                             <div class="button-container">
-                                <div class="project button"><a target="_blank" href="https://pzakeri22.github.io/my-portfolio/projects/html-css/9-Responsive-Club-Website/">Live</a></div>
-                                <div class="project button"><a target="_blank" href="https://github.com/pzakeri22/my-portfolio/tree/main/projects/html-css/9-Responsive-Club-Website">Code</a></div>
-                            </div>
+                                <div class="button"><a target="_blank" href="https://myredditminimal.netlify.app/">Website</a></div> 
+                                <div class="button"><a target="_blank" href="https://github.com/pzakeri22/redditapp">Code</a></div> 
+                            </div>  
                         </div>
                     </div>
  
-                    <div class="wrapper">      
-                        <img src="./images/jamming2-finaledit.png" class="img" title="abc"/>
+                    <div class="wrapper">       
+                        <img src="./images/jamming2-finaledit.png" class="img" title="abc"/> 
                         <div class="description">
-                            <p>Responsive website for a sports club.</p>
-                            <p>Used HTML & CSS.</p>
+                            <p>Single page application using Spotify's API which allows users to view songs and add new playlists to their Spotify account.</p>    
+                            <p>Built with React.</p> 
                             <div class="button-container">  
-                                <div class="project button"><a target="_blank" href="https://pzakeri22.github.io/my-portfolio/projects/html-css/9-Responsive-Club-Website/">Live</a></div>
-                                <div class="project button"><a target="_blank" href="https://github.com/pzakeri22/my-portfolio/tree/main/projects/html-css/9-Responsive-Club-Website">Code</a></div>
+                                <div class="button spotify"><a target="_blank" href="
+                                    https://user-images.githubusercontent.com/92223059/181228044-46546401-f1bf-41bb-a43a-8de867345979.mp4">Demo with audio</a></div>
+                                <div class="button"><a target="_blank" href="https://github.com/pzakeri22/spotify_playlist_app">Code</a></div> 
                             </div>
                         </div>
                     </div>
 
-                    <div class="wrapper">  
+                    <div class="wrapper">   
                         <img src="./images/club-screenshot-finaledit.png" class="img" title="abc"/>
                         <div class="description">
-                            <p>Responsive website for a sports club.</p>
-                            <p>Used HTML & CSS.</p>
+                            <p>Responsive website design for an activity club.</p>  
+                            <p>Built with HTML & CSS.</p>   
                             <div class="button-container">
-                                <div class="project button"><a target="_blank" href="https://pzakeri22.github.io/my-portfolio/projects/html-css/9-Responsive-Club-Website/">Live</a></div>
-                                <div class="project button"><a target="_blank" href="https://github.com/pzakeri22/my-portfolio/tree/main/projects/html-css/9-Responsive-Club-Website">Code</a></div>
+                                <div class="button"><a target="_blank" href="https://pzakeri22.github.io/activity-club/">Website</a></div>
                             </div>
                         </div>
                     </div>
-  
-                    <!-- <div class="wrapper"> 
-                        <img src="./images/codecademy-store-edit1.png" class="img" title="abc"/>
-                        <div class="description">
-                            <p>Responsive website for a sports club.</p>
-                            <p>Used HTML & CSS.</p>
-                            <div class="button-container">
-                                <div class="project button"><a target="_blank" href="https://pzakeri22.github.io/my-portfolio/projects/html-css/9-Responsive-Club-Website/">Live</a></div>
-                                <div class="project button"><a target="_blank" href="https://github.com/pzakeri22/my-portfolio/tree/main/projects/html-css/9-Responsive-Club-Website">Code</a></div>
-                            </div>
-                        </div>
-                    </div> -->
             </div>
             
             <!-- Directs to github & live website link (which doesnt work yet as I havnt learnt react hosting)-->
@@ -239,22 +221,19 @@
 -->
 
 <!-- 
-font-family: 'Lato', sans-serif;
 
-font-family: 'Lato', sans-serif;
 font-family: 'Roboto Mono', monospace;
-font-family: 'Koulen', cursive;
 
-font-family: 'Comic Neue', cursive;
-font-family: 'Edu SA Beginner', cursive;
 
 font-family: 'Coming Soon', cursive;
 font-family: 'Delius', cursive;
 
-font-family: 'Handlee', cursive;
-font-family: 'Kalam', cursive;
-font-family: 'Pangolin', cursive;
-font-family: 'Patrick Hand', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Work Sans', sans-serif;
+
 
  -->
 
