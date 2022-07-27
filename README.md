@@ -1,10 +1,10 @@
-# Web Developer Portfolio - by Parisa Z.
+# Front End Developer Portfolio - by Parisa Z.
 
-A portfolio showcasing my skills a Front End Web Developer. 
+A portfolio showcasing my skills as a Front End Developer. 
 
 ## Technologies
 
-This project was created with:
+This portfolio was created with:
 - HTML 5
 - CSS 3
 - JavaScript ES6
@@ -12,9 +12,9 @@ This project was created with:
 - Github
 - Markdown
 
-I have further demonstrated the use of HTML, CSS and JavaScript throughout the projects in this portfolio.
+I have showcased the use of additional skills such as React and Redux throughout the projects featured in this portfolio.
  
 ## Launch
 
-My portfolio can be viewed from the following link: https://pzakeri22.github.io/portfolio/
+My portfolio can be viewed at the following link: https://pzakeri22.github.io/portfolio/
 

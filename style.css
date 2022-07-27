@@ -3,36 +3,23 @@
     margin: 0; 
     padding: 0; 
     font-family: 'Lato', sans-serif;    
-    /* outline: 1px solid red !important; */
-    /* font-size: 1.05rem;   */
+    /* outline: 1px solid red !important;  */
 }
 
 html { 
-    scroll-behavior: smooth;
-    /* background-color: lightyellow; */
- 
+    scroll-behavior: smooth; 
 }
 
-
 body {
-    /* background-color: paleturquoise; */
-    width:100%;
-    overflow-x:hidden;
-/* body and grid are same */
-
+    /* width: 100%;
+    overflow-x: hidden; */ 
 }
 
 .grid {
-    /* background-color: lightyellow; */
-    /* border: 1px solid red; */
-    /*(put padding of 1rem in each section instead) */
-    display: grid;
-    /* width: 100%; */
-    
+    display: grid;    
     width: 100vw; 
     max-width: 100%;
-    
-    height: auto; /* this is a guess*/
+    height: auto;
     grid-template-areas:
                         "nav"
                         "hero"
@@ -41,20 +28,10 @@ body {
                         "portfolio"
                         "contact";
     grid-template-columns: 1fr; 
-    /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) 25rem;    */
-    /* grid-template-rows: auto minmax(37rem, auto) 19rem 26rem minmax(49rem, auto) auto ;        */
-    /* grid-template-rows: auto minmax(30rem, 49rem) auto 26rem minmax(49rem, auto) auto ;        */
-    /* grid-template-rows: auto auto auto auto minmax(49rem, auto) auto ;        */
-
-    /* grid-template-rows: auto minmax(94vh, auto) auto auto minmax(49rem, auto) auto ;        */
     grid-template-rows: auto minmax(94vh, auto) auto auto auto auto;        
-
-    /* background-color: lightgray; */
     justify-content: center; 
-
-    overflow-x: hidden; 
-    overflow-y: hidden; 
-
+    /* overflow-x: hidden; 
+    overflow-y: hidden;  */
 } 
 
 h3 {
@@ -65,26 +42,19 @@ h3 {
 .main-nav {
     grid-area: nav; 
     background: linear-gradient(to right, #e66465, #9198e5);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; 
-    /* padding: 0.6rem 1rem;*/
- 
+    width: 100%;  
     padding: 5px 1rem;            
-
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 10;
-    /* display: none;  */
-    /* background-color: lightgreen; */
 }
 
 .main-nav p {
     color: white; 
-    /* font-size: calc(1.15rem + 0.7vw);      */
     font-size: 2rem;             
     letter-spacing: 0.1rem;   
     text-align: center;
@@ -97,14 +67,12 @@ h3 {
     width: auto;             
     gap: 1rem;
     align-items: center;   
- 
 }
 
 .main-nav li {
-    font-size: calc(0.9rem + 0.25vw);              
+    font-size: calc(1rem + 0.2vw);               
     letter-spacing: 0.05rem;     
     list-style: none;    
-    font-weight: bold; 
 }
 
 .main-nav a {
@@ -115,8 +83,6 @@ h3 {
     color: white;
 }
 
-
-/* fix home button */
 .main-nav .home-link { 
     padding: 0;
 }
@@ -126,7 +92,7 @@ h3 {
     color: midnightblue; 
 } 
 
-  .main-nav img {
+.main-nav img {
     width: calc(2.5rem + 0.3vw);                 
     vertical-align: top;       
     filter: invert(100%);  
@@ -148,11 +114,12 @@ h3 {
     text-align: center;
     color: midnightblue;
     letter-spacing: 0.1rem;
-    /* width: 100%;   */ 
     flex-wrap: wrap; 
     position: relative;
     top: 56px;    
-    padding: 5rem 0; 
+    padding: 5rem 0;  
+    width: 95%;  
+    margin-left: 2.5vw;   
 }
 
 .hero .intro {
@@ -163,205 +130,96 @@ h3 {
 } 
 
 .hero h1 {
-    /* font-size: 3.2rem;  */
     font-size: calc(2.0rem + 1.5vw);                       
     max-width: 90vw; 
-
 }
 
 .hero h2 {
     font-size: 1.7rem;
     display: none;
-    color: rgb(188, 23, 92)
+    color: rgb(188, 23, 92); 
 }
 
-.hero p {
-    font-size: 1.3rem; 
+.hero p { 
+    font-size: calc(1rem + 0.3vw);     
     letter-spacing: 0.05rem;
     max-width: 90vw;  
-
 }
 
 .hero img {
     height: 75vh;  
     max-height: 50rem;        
     width: auto;   
-
 }
 
-
 .skills {
-    /* background-color: lightblue;
-    color: midnightblue; */
     grid-area: skills;
     position: relative;
     top: 56px;     
-    /* background-color: rgb(85, 105, 187); */
     background-color: rgb(105, 125, 204); 
-
     color: rgb(255, 255, 255);
-
     display: flex;
-    gap: 10rem;            
-    
+    gap: calc(7rem + 2vw);   
     align-items: center;    
     justify-content: center; 
-
     flex-wrap: wrap;   
     padding: 5.5rem 0;  
 }
 
 .checklist {
-    /* max-width: 400px; */ 
-    /* background: rgb(245, 232, 174);  */
-    /* border: 5px solid rgba (200, 200, 200, 0);   */ 
-    /* border-bottom-right-radius: 30px;    */
     display: grid;    
-
     overflow: hidden;             
-    /* background-color: rgb(25, 146, 179);   */
-    /* background-color: rgb(85, 105, 187); */
- 
-    /* border-radius: 5px;        */
-    /* border: 1px solid red;   */
     row-gap: 1px;      
     column-gap: 1px;    
     box-shadow: 10px 10px 0 rgba(0,0,0,0.1); 
-    /* margin: 6.5rem 0;      */
-
     justify-content: center;       
-/* 
-     grid-template-areas: "html" "css"
-                        "javascript" "react"
-                        "redux" "excel"
-                        "git" "design"
-                        "responsive" "accessibility";    */
-
-    /* width: auto;   */ 
-
-    /* min-width: 271px; 
-    width: 90vw;  
-    max-width: 542px; */
-
-    /* max-width: 54 2px;  */
- 
-    /* width: 600px;      */
-
-
-
-    /* width: 100%;  */
-
-    /* height: 200px;   */
-
-
-    /* 
-    542 on big screen
-    on small screen, remains at 542*/
-
-
-    /* height: auto;   */ 
-    /* height: auto;  
-    max-height: 900px;        */ 
-
     width: 545px;       
     max-width: 90vw;           
     grid-template-columns: repeat(auto-fill, 272px);          
-    /* grid-template-columns: min-content 1fr;    */
-
-    /* grid-template-rows: repeat(auto-fill, 64px);               */
- 
-    /* grid-template-columns: 1fr 1fr; */
-    /* max-height: 350px;          */
-    /* height: 20rem; */   
-    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr;     */
-    /* grid-template-rows: repeat(auto-fill, 1fr);  */
 }
 
   .item {
     display: flex; 
- 
-    background-color: rgb(237, 237, 253);
     background-color: rgb(245, 232, 174);   
-
-    /* border: 1px solid black; */
-    /* height: 63px;        */ 
-    /* width: auto;       */
-
-     /* border-top: 1px solid #F1F1F1;
-    border-right:  1px solid #D1E2FF;      */
-
-    /* border: 1px solid #F1F1F1;  */
-
-    /* border-top: 2px solid #2a5f7b;
-    border-left:  2px solid #cd3f37;   */
-    /* border-style: double; */
-
-    /* border-right: 1px dotted red;           */
   }
-
 
   .item img {
     width: 2.5rem;  
     height: auto;  
     margin-left: 3px;      
     align-self: center;     
-
   }
 
-  
   .checklist p {
-    color: midnightblue;  
     color:#ed2e77;        
-    /* color:#ed2e4e;        */
     margin: 0; 
     transition: background 0.2s;
     flex: 1;
-    font-size: 20px;
-    font-weight: 400;            
+    font-size: 20px; 
     font-family: 'Coming Soon', cursive;    
     padding: 20px 20px 10px 20px;   
-
   }  
 
-
-  @media only screen and (max-width: 605px) {      
-    .checklist {
-        box-shadow: none; 
-    }
- 
-    .item {
-        height: 50px;   
-    }  
-
-    .checklist p {
-        font-size: 17px;        
-        
-    }
-
-    .item img {
-        width: 2rem;       
-        height: auto;  
-    }
-}
-
-.about {
-    padding: 5rem 0;    
+  .about {
     grid-area: about;
     color: rgb(47, 0, 78);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 7rem; 
     background-color: rgba(193, 167, 232, 0.5);
-
     position: relative;
-    top: 56px;     
-    flex-wrap: wrap;  
-
-    /* overflow: hidden; */
-
+    top: 56px;       
+    display: flex; 
+    justify-content: center; 
 }
+
+  .about .container {
+    width: 95%;
+    display: flex;
+    justify-content: center; 
+    gap: 7rem; 
+    padding: 5rem 0;    
+    align-items: center;  
+    flex-wrap: wrap; 
+  }
+
 
 .about p {
     width: 50rem;
@@ -369,8 +227,6 @@ h3 {
     line-height: 2;
     text-align: justify;
     padding: 1rem; 
-    /* border: 2px solid white;      
-    border-radius: 10px;  */
 }
 
 .portfolio {
@@ -390,6 +246,7 @@ h3 {
     justify-content: center;
     align-items: center;
     row-gap: 4rem;           
+    max-width: 95%; 
 }
 
 .portfolio .projects {
@@ -400,19 +257,11 @@ h3 {
     max-width: 90rem; 
 }
 
-/* add position and bottom back in if these are ok */
 .portfolio .wrapper {
-    /* display: flex;
-    flex-direction: column;  
-    justify-content: space-between;   */
-     /* align-items: center; */  
-
     width: 600px; 
     max-width: 90vw;        
     height: auto;      
-
     position: relative;  
-        /* background-color: rgb(58, 68, 255);      */
 }
 
 .portfolio .wrapper img {
@@ -422,34 +271,29 @@ h3 {
     height:100%;    
 }
 
-
 .portfolio .wrapper .description {
     position: absolute;   
     height: 100%; 
     width: 100%; 
     top: 0;  
-
     display: flex;
     gap: 1rem;   
-    letter-spacing: 0.5px;    
     flex-direction: column;
     justify-content: center; 
     align-items: center;    
     text-align: center; 
-
-        /* hiding mousover box for now because it causes horizontal scroll on mobile - it moves out of place. */
-    visibility:hidden;
-    background-color: rgba(148, 159, 245, 0.93);     
-    color: rgb(12, 12, 74);
+    background-color: rgba(148, 159, 245, 1);
+    color: midnightblue;  
     font-size: 1.15rem;    
-    /* font-weight: bold;  */
     text-align: middle;    
+    visibility: hidden;
 }
 
 .portfolio .wrapper .description p {
     width: 80%;   
     padding: 0.5rem;   
 }
+
 .portfolio .wrapper:hover .description {
     visibility: visible; 
     animation: fadeIn 0.3s;  
@@ -462,8 +306,7 @@ h3 {
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  } 
-
+} 
 
 .portfolio .wrapper .description .button-container { 
     display: flex;
@@ -475,7 +318,6 @@ h3 {
     padding: 0.25rem 0.75rem;  
     margin: 0 0.3rem;
     background-color: rgb(255, 255, 255);
- 
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     display: inline-block;
 }
@@ -487,33 +329,22 @@ h3 {
 
 .portfolio .wrapper .description .button a {
     text-decoration: none;
-    color: rgb(12, 12, 74); 
+    color: midnightblue;   
 }
 
 .contact {
     list-style: none; 
     grid-area: contact;
-    /* background-color: rgb(85, 105, 187);
-    background-color: rgb(212, 147, 169); */
-    background-color: rgb(224, 186, 214);
-
-    /* color: white; */
+    background-color: rgb(235, 189, 222);
     color: rgb(56, 1, 54);
-
-    /* color: white; */
- 
-    /* color: midnightblue; */
-
     display: flex;
     justify-content: center;    
     align-items: center;  
-     
     position: relative;
     top: 56px;   
     padding: 4rem 0;        
     margin-bottom: 56px;  
     line-height: 2;  
- 
 }
 
 .contact .container {
@@ -523,19 +354,10 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;  
     gap: calc(0.4rem + 4vw);         
-    /* justify-items: center;    */
 }
 
 .contact h3 {
-    color: midnightblue;
     color: rgb(56, 1, 54); 
-
-    /* color: white;   */
-
-}
-
-.contact p {
-    /* margin-left: 4rem;       */
 }
 
 .contact ul {
@@ -543,15 +365,10 @@ h3 {
     gap: 1.5rem;    
     list-style: none;
     align-items: center;
-    /* flex-direction: column; */
-    /* border: 1px solid white; */
 }
 
 .contact img {
     filter: invert(6%) sepia(67%) saturate(4163%) hue-rotate(290deg) brightness(87%) contrast(106%);
-    /* filter: invert(100%) sepia(98%) saturate(0%) hue-rotate(329deg) brightness(102%) contrast(104%); */
-
-
     vertical-align: middle;
     height: 3rem;
 }
@@ -561,9 +378,7 @@ h3 {
 }
 
 .contact a {
-    /* color: rgb(72, 1, 42); */
     color: rgb(56, 1, 54);
-    /* color: white; */
     text-decoration: none;  
 }
 
@@ -572,7 +387,39 @@ h3 {
     vertical-align: middle;
 }
 
-@media only screen and (max-width: 700px) {
+/* when hero wraps */
+@media only screen and (max-width: 1174px) {  
+    .hero {
+        gap: 1.5rem;         
+    }
+    .hero img {
+        width: 85vw;   
+        max-width: 35rem;             
+        height: auto; 
+    }
+}
+
+/* when about section wraps */
+@media only screen and (max-width: 1155px) {     
+    .about .container { 
+        flex-direction: column; 
+        gap: 2.5rem;      
+    }
+}
+
+ /* when checklist & title cant fit comfortably alongside eachother */
+ @media only screen and (max-width: 950px) {  
+    .skills { 
+        flex-direction: column; 
+        gap: 3rem;                 
+    }
+    .skills h3 {
+        order: -1; 
+    } 
+} 
+
+/* when nav cant fit logo */
+@media only screen and (max-width: 750px) { 
     .main-nav p {
         display: none;
     }
@@ -582,63 +429,38 @@ h3 {
     .hero h2 {
         display: block;   
     }
-
-    .hero p {
-        font-size: 1rem;   
-    }
-
-    .contact {
-
-    }
-}
-
-/* when hero wraps */
-@media only screen and (max-width: 1162px) {
-    .hero {
-        gap: 1.5rem;         
-    }
-    
-    .hero img {
-        width: 85vw;   
-        max-width: 35rem;             
-        height: auto; 
-    }
-}
-
-/* on small screens, reduce padding */
-@media only screen and (max-width: 425px) {
-    .hero {
-        padding: 2rem 0;                           
-    } 
-}
-
-
-/* on narrow mobiles */
-@media only screen and (max-width: 375px) {
-    .main-nav ul {
-        gap: 0rem;  
-    }  
-
-    .main-nav .home-link { 
-        display: none;
-    }
-}
-
- /* when checklist & title cant fit comfortably alongside eachother */
-@media only screen and (max-width: 1000px) { 
-    .skills { 
-        flex-direction: column; 
-        gap: 2rem;             
-    }
-
-    .skills h3 {
-        order: -1; 
-    } 
 } 
 
-@media only screen and (max-width: 1060px) {   
-    .about {
-        flex-direction: column; 
-        gap: 2.5rem;    
+/* when checklist can't fit 2 columns */ 
+@media only screen and (max-width: 605px) {      
+    .checklist {
+        box-shadow: none; 
+    }
+    .item {
+        height: 50px;   
+    }  
+    .item img {
+        width: 2rem;        
+        height: auto;  
+    }
+    .checklist p {
+        font-size: 17px;         
+    }
+}
+
+/* on small screens, reduce padding on hero */ 
+@media only screen and (max-width: 425px) {
+    .hero {
+        padding: 2rem 0;                            
+    } 
+}
+
+/* on narrow mobiles, to fit nav in */
+@media only screen and (max-width: 375px) {
+    .main-nav ul {
+        gap: 0rem;    
+    }  
+    .main-nav .home-link { 
+        display: none;
     }
 }
