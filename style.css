@@ -335,7 +335,7 @@ h3 {
 .contact {
     list-style: none; 
     grid-area: contact;
-    background-color: rgb(106, 93, 137);   
+    background-color: rgb(103, 93, 154);   
     color: rgb(255, 255, 255); 
     display: flex;
     justify-content: center;    
