@@ -202,8 +202,8 @@ h3 {
 
   .about {
     grid-area: about;
-    color: rgb(47, 0, 78);
-    background-color: rgba(193, 167, 232, 0.5);
+    background-color: rgb(252, 220, 233);
+    color: rgb(56, 1, 30);
     position: relative;
     top: 56px;       
     display: flex; 
@@ -335,9 +335,8 @@ h3 {
 .contact {
     list-style: none; 
     grid-area: contact;
-    background-color: rgb(235, 189, 222);
-
-    color: rgb(56, 1, 54);
+    background-color: rgb(106, 93, 137);   
+    color: rgb(255, 255, 255); 
     display: flex;
     justify-content: center;    
     align-items: center;  
@@ -358,7 +357,7 @@ h3 {
 }
 
 .contact h3 {
-    color: rgb(56, 1, 54); 
+    color: rgb(255, 255, 255);  
 }
 
 .contact ul {
@@ -369,7 +368,7 @@ h3 {
 }
 
 .contact img {
-    filter: invert(6%) sepia(67%) saturate(4163%) hue-rotate(290deg) brightness(87%) contrast(106%);
+    filter: invert(99%) sepia(1%) saturate(2182%) hue-rotate(230deg) brightness(116%) contrast(100%);
     vertical-align: middle;
     height: 3rem;
 }
@@ -379,7 +378,7 @@ h3 {
 }
 
 .contact a {
-    color: rgb(56, 1, 54);
+    color: rgb(255, 255, 255);  
     text-decoration: none;  
 }
 
