@@ -17,12 +17,12 @@
 
         <nav class="main-nav" >
             <div class="brand">
-                <img class="logo" src="./images/girl64px.png" alt="web development">
+                <img class="logo" src="./images/girl64px.webp" alt="web development">
                 <p>Parisa Zakeri</p>
             </div>
 
             <ul>
-                <li><a href="#home" class="home-link"><div class="up-arrow"><img src="./images/up-arrow.png" alt="home"/></div></a></li>
+                <li><a href="#home" class="home-link"><div class="up-arrow"><img src="./images/up-arrow.webp" alt="home"/></div></a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -35,7 +35,25 @@
                 <h3>Parisa Zakeri</h3> 
 
             </div> 
-            <img src="./images/herostretched-blueoverlay2.jpg" alt="web development">
+            <img 
+                srcset="
+                    ./images/herostretched-blueoverlay2-344.webp 344w, 
+                    ./images/herostretched-blueoverlay2-688.webp 688w,
+                    ./images/herostretched-blueoverlay2-960.webp 960w,
+                    ./images/herostretched-blueoverlay2-1390.webp 1390w,
+                    ./images/herostretched-blueoverlay2-1170.webp 1170w,
+                    ./images/herostretched-blueoverlay2-1750.webp 1750w,
+                    ./images/herostretched-blueoverlay2-2048.webp 2048w"
+                sizes="
+                    (max-width: 344px) 344px,
+                    (max-width: 688px) 688px,
+                    (max-width: 960px) 960px,
+                    (max-width: 1390px) 1390px,
+                    (max-width: 1170px) 1170px,
+                    (max-width: 1750px) 1750px,
+                    2048px"
+                src="./images/herostretched-blueoverlay2-2048.webp" 
+                alt="web development">
         </section>
 
         <section class="portfolio" id="projects">  
@@ -45,7 +63,7 @@
                 <div class="projects">
 
                     <div class="wrapper">
-                        <img src="./images/monitormockupmediumreddit.png"/>
+                        <img src="./images/monitormockupmediumreddit.webp"/>
                         <div class="desktop-info">
                             <p class="title">Reddit</p>   
                             <p class="para first">Minimal Reddit website for viewing current posts and comments from Reddit's API.</p>    
@@ -68,11 +86,11 @@
                                 <div class="button"><a target="_blank" href="https://github.com/pzakeri22/spotify-app">GitHub / README</a></div> 
                             </div>  
                         </div>
-                        <img src="./images/monitormockupmediumspotify.png"/>
+                        <img src="./images/monitormockupmediumspotify.webp"/>
                     </div>
 
                     <div class="wrapper">
-                        <img src="./images/monitormockupmediumclub.png"/>
+                        <img src="./images/monitormockupmediumclub.webp"/>
                         <div class="desktop-info">
                             <p class="title">Website Design</p>
                             <p class="para first">Responsive homepage designed for an activity club.</p>    
@@ -95,19 +113,19 @@
                 <ul>
                     <li>
                         <a href="mailto:p.zakeri22@gmail.com" target="_blank" class="email button">
-                            <img src="./images/email.png"/>
+                            <img src="./images/email.webp"/>
                             <span>Email</span>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/parisazakeri/" target="_blank" class="linkedin button">
-                            <img src="./images/linkedin.png"/>
+                            <img src="./images/linkedin.webp"/>
                             <span>LinkedIn</span>
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/pzakeri22?tab=repositories" target="_blank" class="github button">
-                            <img src="./images/github-klipartz.com.png"/>
+                            <img src="./images/github-klipartz.com.webp"/>
                             <span>Github</span>
                         </a>
                     </li>
