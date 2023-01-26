@@ -74,7 +74,7 @@ h3 {
     color:#26283b;
     font-size: 1.7rem;                
     text-align: center;
-    font-family: 'Lora', serif;
+    /* font-family: 'Lora', serif; */
 }
 
 .main-nav ul {
@@ -146,6 +146,7 @@ h3 {
 
 .hero h1 {
     font-size: calc(2.0rem + 0.7vw);  
+    /* font-size: calc(2.4rem + 0.7vw);   */
     max-width: 90vw; 
 }
 
@@ -342,6 +343,8 @@ h2 {
 
 /* when hero wraps */
 @media only screen and (max-width: 1181px) {          
+    /* @media only screen and (max-width: 1309px) {           */
+
     .hero {
         justify-content: center; 
         gap: 4rem; 
@@ -386,17 +389,7 @@ h2 {
     }
 }
 
- /* when checklist & title cant fit comfortably alongside eachother */
- @media only screen and (max-width: 950px) {  
-    .skills { 
-        flex-direction: column; 
-        gap: 3rem;                 
-    }
-    .skills h3 {
-        order: -1; 
-    } 
-} 
-
+ 
 /* when nav cant fit logo */
 @media only screen and (max-width: 750px) { 
     .main-nav .brand {
@@ -432,23 +425,6 @@ h2 {
     }
 } 
 
-/* when checklist can't fit 2 columns */ 
-@media only screen and (max-width: 605px) {      
-    .checklist {
-        box-shadow: none; 
-    }
-    .item {
-        height: 50px;   
-    }  
-    .item img {
-        width: 2rem;        
-        height: auto;  
-    }
-    .checklist p {
-        font-size: 17px;         
-    }
-
-}
 
 /* on small screens, reduce padding on hero */ 
 @media only screen and (max-width: 425px) {
