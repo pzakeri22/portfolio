@@ -39,7 +39,7 @@ body {
 
 h3 {
     letter-spacing: 0.1rem;   
-    font-size: 2.2rem;   
+    font-size: calc(2.1rem + 0.6vw);    
 }
 
 .main-nav {
@@ -125,6 +125,9 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;  
+    justify-content: space-around;  
+    justify-content: center;  
+
     align-items: center;
     align-content: center;  
     color:#26283b;
@@ -133,6 +136,10 @@ h3 {
     position: relative;
     top: 56px;    
     background: linear-gradient(to right, #eefce9, #91ace5);
+
+    /* added new */
+    gap: 15rem;
+    gap: calc(0rem + 8vw);
 }
 
 .hero .intro {
@@ -140,12 +147,12 @@ h3 {
     flex-direction: column; 
     justify-content: center;          
     gap: calc(1rem + 1.7vw);     
-    margin: 0 4rem;           
+    /* margin: 0 4rem;            */
     text-align: center;  
 } 
 
 .hero h1 {
-    font-size: calc(2.0rem + 0.7vw);  
+    font-size: calc(2.2rem + 1vw);  
     /* font-size: calc(2.4rem + 0.7vw);   */
     max-width: 90vw; 
 }
@@ -157,7 +164,7 @@ h3 {
 }
 
 h2 {
-    font-size: 2rem;    
+    font-size: calc(2.1rem + 0.6vw);    
 }
 
 .hero p { 
@@ -167,8 +174,11 @@ h2 {
 }
 
 .hero img {
-    width: 39vw;      
+    width: 30vw;      
+    outline: 5px solid white;
+    border-radius: 10%;
     max-width: 100vw; 
+    margin: calc(6rem + 1vw) 0;
 }
 
 .portfolio {
@@ -347,7 +357,7 @@ h2 {
 
     .hero {
         justify-content: center; 
-        gap: 4rem; 
+        gap: 0rem; 
         padding: 5.5rem 0;  
     }
 
